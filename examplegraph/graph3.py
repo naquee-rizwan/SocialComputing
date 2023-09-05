@@ -11,18 +11,19 @@ class Graph3(Graph):
         self.binary_file_loaded_graph = None
 
     def save_graph_as_binary(self):
-        f_out = snap.TFOut("forest_fire_network.graph")
+        f_out = snap.TFOut("examplegraph/forest_fire_network.graph")
         self.graph.Save(f_out)
         f_out.Flush()
 
     def load_graph_from_binary(self):
-        f_in = snap.TFIn("forest_fire_network.graph")
+        f_in = snap.TFIn("examplegraph/forest_fire_network.graph")
         self.binary_file_loaded_graph = snap.TNGraph.Load(f_in)
         self.print_nodes_and_edges(self.binary_file_loaded_graph)
 
     def save_graph_as_text_file(self):
-        self.binary_file_loaded_graph.SaveEdgeList("forest_fire_network.txt", "Save as tab-separated list of edges")
+        self.binary_file_loaded_graph.SaveEdgeList("examplegraph/forest_fire_network.txt", "Save as tab-separated "
+                                                                                           "list of edges")
 
     def load_graph_from_text_file(self):
-        self.text_file_loaded_graph = snap.LoadEdgeList(snap.TNGraph, "forest_fire_network.txt", 0, 1)
+        self.text_file_loaded_graph = snap.LoadEdgeList(snap.TNGraph, "examplegraph/forest_fire_network.txt", 0, 1)
         self.print_nodes_and_edges(self.text_file_loaded_graph)

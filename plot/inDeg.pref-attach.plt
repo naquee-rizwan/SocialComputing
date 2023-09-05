@@ -1,5 +1,5 @@
 #
-# PrefAttach(100000, 3) in Degree. G(100000, 299994). 28500 (0.2850) nodes with in-deg > avg deg (6.0), 7650 (0.0765) with >2*avg.deg (Sun Sep  3 10:54:06 2023)
+# PrefAttach(100000, 3) in Degree. G(100000, 299994). 28500 (0.2850) nodes with in-deg > avg deg (6.0), 7650 (0.0765) with >2*avg.deg (Tue Sep  5 14:33:46 2023)
 #
 
 set title "PrefAttach(100000, 3) in Degree. G(100000, 299994). 28500 (0.2850) nodes with in-deg > avg deg (6.0), 7650 (0.0765) with >2*avg.deg"

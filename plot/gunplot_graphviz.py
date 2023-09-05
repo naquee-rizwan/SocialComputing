@@ -15,11 +15,17 @@
     executables in the working directory.
 """
 
-
 import snap
 
-graph_gen_pref_attach = snap.GenPrefAttach(100000, 3)
-graph_gen_pref_attach.PlotInDegDistr("pref-attach", "PrefAttach(100000, 3) in Degree")
 
-graph = snap.GenGrid(snap.PUNGraph, 5, 3)
-graph.DrawGViz(snap.gvlDot, "grid5x3.png", "Grid 5x3")
+class Plot:
+    def __init__(self):
+        pass
+
+    def draw_graph_viz(self):
+        graph = snap.GenGrid(snap.PUNGraph, 5, 3)
+        graph.DrawGViz(snap.gvlDot, "plot/grid5x3.png", "Grid 5x3")
+
+    def draw_gun_plot(self):
+        graph_gen_pref_attach = snap.GenPrefAttach(100000, 3)
+        graph_gen_pref_attach.PlotInDegDistr("pref-attach", "PrefAttach(100000, 3) in Degree")
