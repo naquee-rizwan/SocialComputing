@@ -1,3 +1,4 @@
+import rough_practice
 from examplegraph import Graph1, Graph2, Graph3, Graph4, Graph5
 from plot import Plot
 
@@ -39,8 +40,8 @@ class IntroHelper:
 
 
 if __name__ == "__main__":
-    # IntroHelper(show_output_for=5).intro()
-    plot = Plot()
-    plot.draw_gun_plot()
+    # IntroHelper(show_output_for=1).intro()
+    # plot = Plot()
+    # plot.draw_gun_plot()
     # plot.draw_graph_viz()
-
+    rough_practice.RoughPractice()
