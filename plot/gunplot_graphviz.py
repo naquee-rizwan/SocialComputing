@@ -20,12 +20,17 @@ import snap
 
 class Plot:
     def __init__(self):
-        pass
+        self.graph = None
 
-    def draw_graph_viz(self):
-        graph = snap.GenGrid(snap.PUNGraph, 5, 3)
-        graph.DrawGViz(snap.gvlDot, "plot/grid5x3.png", "Grid 5x3")
+    def update_graph(self, graph):
+        self.graph = graph
 
-    def draw_gun_plot(self):
-        graph_gen_pref_attach = snap.GenPrefAttach(100000, 3)
-        graph_gen_pref_attach.PlotInDegDistr("pref-attach", "PrefAttach(100000, 3) in Degree")
+    def draw_graph_viz(self, filename, description):
+        filepath = "plot/" + filename + ".png"
+        label = {}
+        for NI in self.graph.Nodes():
+            label[NI.GetId()] = str(NI.GetId())
+        self.graph.DrawGViz(snap.gvlDot, filepath, description, label)
+
+    def draw_gun_plot(self, filename, description):
+        self.graph.PlotInDegDistr(filename, description)
