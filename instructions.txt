@@ -1,0 +1,26 @@
+# SocialComputing
+ 
+Name - Naquee Rizwan
+Roll Number - 23CS91R06
+
+All the codes can run from terminal as is mentioned in the assignment
+
+Note while running gen_structure.py
+- I have commented out plotting functions in this file to generate the outputs on console fastly.
+- Whenever required, just uncomment those function calls.
+------------------- Commands -------------------
+- python gen_structure.py networks/random.elist
+- python gen_structure.py networks/smallworld.elist
+- python gen_structure.py subgraphs/facebook.elist
+- python gen_structure.py subgraphs/twitter.elist
+
+Note while running gen_centrality.py
+- All the subgraphs except that of twitter ran within 10 minutes
+- Twitter subgraph was not able to run on my laptop. It was stuck for more than 1 hours before my system crashed.
+- After implementing standard algorithms too, closeness centrality was coming 0 for all nodes for facebook subgraph
+- which was fixed by calculating and normalizing closeness for each connected component which gave better results.
+------------------- Commands -------------------
+- python gen_centrality.py networks/random.elist
+- python gen_centrality.py networks/smallworld.elist
+- python gen_centrality.py subgraphs/facebook.elist
+- python gen_centrality.py subgraphs/twitter.elist -> This crashed my laptop
